@@ -1,0 +1,126 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5fe;
+}
+.registration-container {
+  box-shadow: 0 2px 5px black;
+  border-radius: 5px;
+  background-color: rgba(90, 16, 87, 0.4);
+}
+.logo-container {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  border-radius: 5px 0;
+  position: relative;
+}
+
+.logo {
+  height: 10rem;
+  width: 12rem;
+  border-radius: 50%;
+  margin-top: 35px;
+} 
+
+.form-container {
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+.input-container {
+  display: flex;
+  gap: 3rem;
+}
+.animation {
+  position: relative;
+}
+.input-container input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  outline: none;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+.placeholder {
+  display: block;
+  position: absolute;
+  font-size: 12px;
+  top: -13px;
+  left: 5px;
+  background: transparent;
+  text-transform: uppercase;
+  transition: 0.3s;
+  color: #232525;
+}
+.inputer {
+  color: #232325;
+}
+.inputer::placeholder {
+  opacity: 0;
+}
+.inputer:placeholder-shown ~ .placeholder {
+  top: 9px;
+  left: 6px;
+  opacity: 0.6;
+  color: #232325;
+}
+.inputer:focus ~ .placeholder {
+  display: block;
+  position: absolute;
+  top: -9px;
+  left: 5px;
+  color: rgb(12, 12, 12);
+  opacity: 1;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.placeholder:focus {
+  top: 9px;
+  left: 6px;
+  opacity: 0.6;
+}
+.registration-button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  width: 250px;
+  transition: all 0.3s;
+  box-shadow: 5px #232325;
+}
+
+.registration-button:hover {
+  transform: scale(1.1);
+  color: white;
+  background-color: #232325;
+}
+
+/* @media (max-width: 500px) {
+  .registration-container {
+    min-width: 375px;
+  }
+  .form-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .input-container {
+    flex-direction: column;
+    gap: 1rem;
+  } 
+}*/
